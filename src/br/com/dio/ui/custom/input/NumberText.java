@@ -8,8 +8,10 @@ import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import javax.swing.border.LineBorder;
 
 import static br.com.dio.service.EventEnum.CLEAR_SPACE;
+import static java.awt.Color.*;
 import static java.awt.Font.PLAIN;
 
 public class NumberText extends JTextField implements EventListener {
@@ -26,8 +28,20 @@ public class NumberText extends JTextField implements EventListener {
         this.setHorizontalAlignment(CENTER);
         this.setDocument(new NumberTextLimit());
         this.setEnabled(!space.isFixed());
+        var border = new LineBorder(LIGHT_GRAY, 1);
         if (space.isFixed()) {
             this.setText(space.getActual().toString());
+            this.setEditable(false);
+            this.setFocusable(false);
+            this.setForeground(BLACK);
+            this.setDisabledTextColor(BLACK);
+            this.setBackground(WHITE);
+            this.setBorder(border);
+        } else {
+            this.setEditable(true);
+            this.setForeground(BLUE);
+            this.setBackground(WHITE);
+            this.setBorder(border);
         }
         this.getDocument().addDocumentListener(new DocumentListener() {
 
