@@ -1,6 +1,6 @@
 # 🧩 Sudoku Java Desktop
 
-Um jogo de Sudoku clássico desenvolvido em **Java**, com foco em aplicar conceitos de Programação Orientada a Objetos (POO) e Arquitetura em Camadas. O projeto faz parte do meu portfólio de estudos em Análise e Desenvolvimento de Sistemas (ADS).
+Um jogo de Sudoku clássico desenvolvido em **Java**, com foco em aplicar conceitos de Programação Orientada a Objetos (POO) e Arquitetura em Camadas.
 
 ## 🚀 Funcionalidades
 
